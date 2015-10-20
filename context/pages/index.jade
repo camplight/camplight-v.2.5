@@ -6,17 +6,16 @@ block head
   script(src= timestampUrl("/public/js/app/index.bundle.js"))
 
 block body
-  .container
-    .card
-    .info
-      .text-info
-        img.logo(src="/public/images/logo.png")
-        h3 
-          | Hello! We are 
-          span.red Camplight
-          | .
-        h1 A digital studio for web, mobile and beyond
-        p Camplight is a global network of digital artisans united to create sparks for progress. We see every project we make as a potential “spark”- a digital entity that can help humanity thrive. This is our purpose of being.
+  .card
+    .background
+    .content
+      img.logo(src="/public/images/logo.png")
+      h3 
+        | Hello! We are 
+        span.red Camplight
+        | .
+      h1 A digital studio for web, mobile and beyond
+      p Camplight is a global network of digital artisans united to create sparks for progress. We see every project we make as a potential “spark”- a digital entity that can help humanity thrive. This is our purpose of being.
   footer      
     | You can drop us a line at 
     a(href="mailto:team@camplight.net") team@camplight.net
