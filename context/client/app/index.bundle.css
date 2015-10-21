@@ -18,26 +18,19 @@ html, body {
   height: 100%;
   font-family: Merriweather;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
-  background-image: url("/public/images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
 }
 
 .card {
   display: inline-block;
-  position: relative;
-  width: 945px;
-  height: 500px;
   text-align: left;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -472.5px;
-  margin-top: -250px;
 }
 
 .card .background {
@@ -52,29 +45,20 @@ body {
 }
 
 .card .content {
-  position: relative;  
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 80px;
+  position: absolute;  
 }
 
 .card img {
   float: left;
-  margin-right: 50px;
 }
 
 .card h1 {
   font-family: Lato;
-  font-size: 72px;
-  line-height: 70px;
-  margin-top: -30px;
   margin-bottom: 0px;
-  padding-right: 60px;
 }
 
 .card h3 {
   font-family: Lato;
-  font-size: 36px;
   margin-top: 0px;
 }
 
@@ -82,46 +66,338 @@ body {
   color: #ed1c24;
 }
 
-footer {
-  width: 100%;
+.card .contact-us {
+  margin-top: 110px;
   text-align: center;
-  position: fixed;
-  bottom: 30px;
   color: #ffffff;
 }
 
-footer a {
+.card .contact-us a {
   color: #ffffff;
 }
-// width: 945px;
-// height: 500px;
-@media (max-width: 1060px) {
+
+.wrapper {
+  height: 100%;
+  position: relative;
+  background-image: url("/public/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+.card .info-size {
+}
+
+.card br {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    height: 980px;
+  }
+
   .card {
-    width: 756px;
-    height: 400px;
-    margin-left: -378px;
-    margin-top: -200px;
+    width: 900px;
+    height: 570px;
+    margin-left: -450px;
+    margin-top: 0px;
+    top: 50px;
   }
 
   .card .content {
+    width: 100%;
     padding-top: 55px;
+    text-align: center;
   }
 
   .card img {
     height: 316px;
+    float: none;
+    margin-right: auto;
+  }
+
+  .card h1 {
+    font-size: 39px;
+    line-height: 40px;
+    margin-top: -21px;
+    padding-right: 0px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .card p {
+    color: #ffffff;
+    line-height: 28px;
+    margin-top: 80px;
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  .card .info-size {
+    display: inline-block;
+    width: 272px;
+    text-align: justify;
+  }
+
+  .card .contact-us {
+    margin-top: 20px;
+    padding-left: 250px;
+    padding-right: 250px;
+    text-align: center;
+  }
+
+  .card br {
+    display: inherit;
+  }
+}
+
+
+@media screen and (min-width: 450px) and (max-width: 710px) {
+  .wrapper {
+    height: 980px;
+  }
+
+  .card {
+    width: 1000px;
+    height: 635px;
+    margin-left: -500px;
+    margin-top: 0px;
+    top: 50px;
+  }
+
+  .card .content {
+    width: 100%;
+    padding-top: 55px;
+    text-align: center;
+  }
+
+  .card img {
+    height: 316px;
+    float: none;
+    margin-right: auto;
+  }
+
+  .card h1 {
+    font-size: 55px;
+    line-height: 51px;
+    margin-top: -20px;
+    padding-right: 0px;
+  }
+
+  .card h3 {
+    font-size: 34px;
+  }
+
+  .card p {
+    color: #ffffff;
+    line-height: 28px;
+    margin-top: 100px;
+  }
+
+  .card .info-size {
+    display: inline-block;
+    width: 384px;
+    text-align: justify;
+  }
+
+  .card .contact-us {
+    margin-top: 20px;
+  }
+
+  .card br {
+    display: inherit;
+  }
+}
+
+@media screen and (min-width: 710px) and (max-width: 820px) {
+  .wrapper {
+    min-height: 560px;
+  }
+
+  .card {
+    width: 650px;
+    height: 350px;
+    margin-left: -325px;
+    margin-top: -175px;
+    top: 50%;
+  }
+
+  .card .content {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 55px;
+    text-align: left;
+  }
+
+  .card img {
+    height: 280px;
+    float: left;
+    margin-right: 40px;
+  }
+
+  .card h1 {
+    font-size: 50px;
+    line-height: 43px;
+    margin-top: -25px;
+    width: auto;
+  }
+
+  .card h3 {
+    font-size: 28px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card .contact-us {
+    font-size: 20px;
+    margin-top: 90px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1060px) {
+  .wrapper {
+    min-height: 560px;
+  }
+
+  .card {
+    width: 756px;
+    height: 400px;
+    margin-left: -378px;
+    margin-top: -220px;
+    top: 50%;
+  }
+
+  .card .content {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 55px;
+    text-align: left;
+  }
+
+  .card img {
+    height: 316px;
+    float: left;
+    margin-right: 40px;
   }
 
   .card h1 {
     font-size: 54px;
     line-height: 51px;
     margin-top: -25px;
+    width: auto;
   }
 
   .card h3 {
     font-size: 30px;
   }
 
+  .card .contact-us {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (min-width: 1060px) and (max-width: 1350px) {
+  .wrapper {
+    min-height: 660px;
+  }
+
+  .card {
+    width: 945px;
+    height: 500px;
+    margin-left: -472px;
+    margin-top: -265px;
+    top: 50%;
+  }
+
+  .card .content {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 80px;
+    text-align: left;
+  }
+
+  .card img {
+    height: 338px;
+    float: left;
+    margin-right: 50px;
+  }
+
+  .card h1 {
+    font-size: 72px;
+    line-height: 70px;
+    margin-top: -30px;
+    width: auto;
+  }
+
+  .card h3 {
+    font-size: 36px;
+  }
+
   .card p {
-    //font-size: 14px;
+    font-size: 17px;
+  }
+
+  .card .contact-us {
+    font-size: 24px;
+    margin-top: 110px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .wrapper {
+    min-height: 850px;
+  }
+
+  .card {
+    width: 1228px;
+    height: 650px;
+    margin-left: -614px;
+    margin-top: -340px;
+    top: 50%;
+  }
+
+  .card .content {
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 80px;
+    text-align: left;
+  }
+
+  .card img {
+    height: 550px;
+    float: left;
+    margin-right: 50px;
+  }
+
+  .card h1 {
+    font-size: 85px;
+    line-height: 73px;
+    margin-top: -30px;
+    width: auto;
+  }
+
+  .card h3 {
+    font-size: 51px;
+  }
+
+  .card p {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .card .contact-us {
+    font-size: 34px;
+    margin-top: 110px;
   }
 }
