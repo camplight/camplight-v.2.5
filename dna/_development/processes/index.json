@@ -1,8 +1,5 @@
 {
   "plasma": {
-    "organic-api-routes": {
-      "log": true
-    },
     "organic-site-routes": {
       "log": true
     },

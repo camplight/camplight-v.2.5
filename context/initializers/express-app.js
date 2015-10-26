@@ -36,14 +36,5 @@ module.exports = function(plasma, dna, next) {
   var cookieParser = CookieParser(dna.cookie_secret);
   app.use(cookieParser);
   
-  require("../routes/params")(app)
-  
-  plasma.on(dna.expressSetupDoneOnce, function(){
-    
-    require("../routes/responders")(app)
-
-    if(dna.useErrorHandler)
-      app.use(errorface.errorHandler())
-  })
   next(null, app)
 }

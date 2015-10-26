@@ -1,24 +1,9 @@
 {
   "plasma": {
-    "organic-express-sessions": {
-      "source": "node_modules/organic-express-mongo-sessions",
-      "reactOn": "ExpressServer",
-      "emitReady": "ExpressSessions",
-      "cookie_secret": "@processes.index.membrane.organic-express-server.cookie_secret",
-      "db": "@database.name"
-    },
-    "organic-api-routes": {
-      "source": "node_modules/organic-express-routes",
-      "reactOn": ["ExpressServer", "ExpressSessions"],
-      "pattern": "/**/*.js",
-      "path": "context/routes/api",
-      "helpers": "context/routes/api-helpers",
-      "mount": "/api",
-      "emitReady": "ApiRoutesReady"
-    },
+
     "organic-site-routes": {
       "source": "node_modules/organic-express-routes",
-      "reactOn": ["ExpressServer", "ExpressSessions"],
+      "reactOn": ["ExpressServer"],
       "pattern": "/**/*.js",
       "path": "context/routes/site",
       "helpers": "context/routes/site-helpers",
@@ -26,11 +11,11 @@
     },
     "organic-express-response": {
       "source": "node_modules/organic-express-response",
-      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"]
+      "reactOn": ["ExpressServer", "SiteRoutesReady"]
     },
     "organic-static-pages": {
       "source": "node_modules/organic-express-staticpages",
-      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"],
+      "reactOn": ["ExpressServer", "SiteRoutesReady"],
       "pattern": "/**/*.jade",
       "path": "context/pages",
       "emitReady": "StaticPagesReady",
@@ -51,10 +36,6 @@
         "name": "master"
       }
     },
-    "organic-mongoose": {
-      "source": "node_modules/organic-mongoose",
-      "database": "@database"
-    },
     "organic-express-server": {
       "source": "node_modules/organic-express-server",
       "forceConnectionsDestroyOnClose": true,
@@ -70,7 +51,6 @@
       },
       "expressSetupDoneOnce": [
         "ExpressServer",
-        "ApiRoutesReady",
         "SiteRoutesReady",
         "StaticPagesReady"
       ]
