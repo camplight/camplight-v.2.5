@@ -61,7 +61,7 @@
       "port": 1337,
       "initScript": "context/initializers/express-app",
       "emitReady": "ExpressServer",
-      "cookie_secret": "stem",
+      "cookie_secret": "camplight",
       "views": "context/pages",
       "uploadsDir": "uploads",
       "viewEngine": {
