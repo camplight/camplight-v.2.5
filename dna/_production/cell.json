@@ -7,7 +7,7 @@
   "source": "git@github.com:camplight/camplight-v.2.5.git",
   "branch": "master",
   "origin": "origin",
-  "runAngel": "CELL_MODE=_staging node ./node_modules/.bin/angel",
+  "runAngel": "CELL_MODE=_production node ./node_modules/.bin/angel",
   "start": "{sourceNode}; cd {cwd}; {runAngel} app start index.js",
   "stop": "{sourceNode}; cd {cwd}; {runAngel} app stop index.js",
   "restart": "{sourceNode}; cd {cwd}; {runAngel} app restart index.js",
