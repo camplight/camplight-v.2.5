@@ -9,10 +9,6 @@
       "helpers": "context/routes/site-helpers",
       "emitReady": "SiteRoutesReady"
     },
-    "organic-express-response": {
-      "source": "node_modules/organic-express-response",
-      "reactOn": ["ExpressServer", "SiteRoutesReady"]
-    },
     "organic-static-pages": {
       "source": "node_modules/organic-express-staticpages",
       "reactOn": ["ExpressServer", "SiteRoutesReady"],
