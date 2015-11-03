@@ -1,5 +1,5 @@
 {
-  "name": "camplight",
+  "name": "camplight-v2.5",
   "remote": "ssh node@176.58.101.229",
   "sourceNode": ". ~/.nvm/nvm.sh ; nvm use v0.10.24",
   "cwd": "~/camplight-v2.5",
